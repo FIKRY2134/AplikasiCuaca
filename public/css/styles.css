@@ -1,6 +1,6 @@
 body {
     color: #333333;
-    font-family: arial;
+    font-family: Arial, sans-serif;
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
@@ -18,16 +18,19 @@ footer {
     border-top: 1px solid #eeeeee;
     margin-top: 16px;
     padding: 16px 0;
+    text-align: center; /* Pusatkan teks pada footer */
 }
 
 header {
     margin-top: 16px;
     margin-bottom: 48px;
+    text-align: center; /* Pusatkan teks pada header */
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 36px; /* Mengurangi ukuran font agar tidak terlalu besar */
     margin-bottom: 16px;
+    text-align: center; /* Pusatkan teks judul */
 }
 
 header a {
@@ -37,18 +40,203 @@ header a {
 }
 
 .portrait {
-    width: 250px;
+    display: block; /* Membuat gambar menjadi elemen blok untuk menghindari masalah layout */
+    margin: 0 auto; /* Pusatkan gambar secara horizontal */
+    max-width: 100%; /* Pastikan gambar tidak melebihi lebar container */
 }
 
 input {
     border: 2px solid #cccccc;
     padding: 8px;
-  }
-  
-  button {
+    width: 100%; /* Isi lebar input agar sesuai dengan container */
+    margin-bottom: 10px; /* Tambahkan jarak di bawah input */
+}
+
+button {
     cursor: pointer;
-    border-radius: 0px;
+    border: none; /* Hapus border untuk memperbaiki tampilan tombol */
+    border-radius: 5px; /* Tambahkan sedikit border-radius pada tombol */
     background-color: #cccccc;
     color: white;
-    padding: 9px;
-  }
+    padding: 10px 20px; /* Sedikit peningkatan ukuran padding untuk tombol */
+    width: auto; /* Biarkan tombol mengatur lebar sendiri */
+    margin: 10px 0; /* Tambahkan jarak di atas dan di bawah tombol */
+}
+
+  @import url("https://fonts.googleapis.com/css2?family=Calligraffitti&family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --bg-clr: #e4e6ee;
+  --white: #f7efd2;
+  --rleft-bg: #eed7a1;
+  --rright-bg: #eed7a1;
+  --primary-text-clr: #525252;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: var(--bg-clr);
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--primary-text-clr);
+  color: #000;
+  padding: 0 20px;
+}
+
+h2 {
+  font-family: "Calligraffitti", cursive;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resume {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  margin: 50px auto;
+  background: var(--white);
+}
+
+.resume .resume_left {
+  width: 270px;
+}
+
+.resume .resume_right {
+  background: var(--rright-bg);
+  width: calc(800px - 270px);
+}
+
+.resume_left .r_profile_pic,
+.resume_right .r_namerole {
+  width: 100%;
+  height: 260px;
+  padding: 35px;
+}
+
+.resume_left .r_profile_pic {
+  background: var(--rleft-bg);
+}
+
+.resume_left .r_profile_pic img {
+    width: 150px; /* Sesuaikan dengan lebar gambar profil Anda */
+    height: 150px; /* Sesuaikan dengan tinggi gambar profil Anda */
+    border-radius: 50%; /* Membuat gambar profil menjadi bulat */
+    background: #f7efd2;
+}
+
+.resume_left .r_left_sub {
+  padding: 35px;
+}
+
+.resume_left .r_left_sub > div:not(:last-child),
+.resume_right .r_right_sub > div:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.resume_left .r_aboutme p {
+  text-align: center;
+}
+
+.resume_left .r_skills ul li,
+.resume_left .r_skills ul li p:first-child,
+.resume_left .r_hobbies ul li p:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.resume_left .r_skills ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.resume_left .r_skills ul li p:first-child,
+.resume_left .r_hobbies ul li p:first-child {
+  width: 45px;
+  height: 45px;
+  background: var(--rleft-bg);
+  margin-right: 15px;
+  border-radius: 50%;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--white);
+}
+
+.resume_left .r_hobbies ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resume_left .r_hobbies ul li {
+  margin-bottom: 10px;
+}
+
+.resume_left .r_hobbies ul li p:hover {
+  background: var(--rright-bg);
+}
+
+.resume_right .r_namerole p {
+  font-family: "Calligraffitti", cursive;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.resume_right .r_namerole p:last-child {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+}
+
+.resume_right .r_info {
+  padding: 35px;
+  background: var(--white);
+}
+
+.resume_right .r_info ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume_right .r_info p {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.resume_right .r_right_sub {
+  padding: 35px;
+  padding-bottom: 0;
+}
+
+.resume_right .r_right_sub p {
+  color: var(--white);
+  color: #000;
+}
+
+.resume_right .r_right_sub ul li {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.resume_right .r_right_sub ul li div:first-child {
+  width: 25%;
+  margin-right: 15px;
+}
+
+.resume_right .r_right_sub ul li div:last-child {
+  width: 75%;
+}
+
+.resume_right .r_right_sub p:first-child {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
